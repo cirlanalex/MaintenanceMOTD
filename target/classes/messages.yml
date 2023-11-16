@@ -1,0 +1,185 @@
+# prefix
+prefix : '<gray>[</gray><gradient:red:yellow>Maintenance</gradient><gray>]</gray> '
+
+# help command
+help:
+- '<yellow>/maintenance <on|off> [reason] <gray>- <white>Toggle maintenance mode'
+- '<yellow>/maintenance <for> <time><s | m | h | d> [reason] <gray>- <white>Toggle maintenance mode'
+- '<yellow>/maintenance <maxplayers> <on | off | set> <gray>- <white>Set the max players'
+- '<yellow>/maintenance <fakeplayers> <on | off | set | set-add-in-list | set-random-order> <gray>- <white>Set the fake players'
+- '<yellow>/maintenance <normal-motd> <line> [text] <gray>- <white>Set the normal MOTD'
+- '<yellow>/maintenance <maintenance-motd> <line> [text] <gray>- <white>Set the maintenance MOTD'
+- '<yellow>/maintenance <normal-player-count> <on | off | set | remove | hover | set-hover | remove-hover> <gray>- <white>Set the normal player count'
+- '<yellow>/maintenance <maintenance-player-count> <on | off | set | remove | hover | set-hover | remove-hover> <gray>- <white>Set the maintenance player count'
+- '<yellow>/maintenance <normal-random> <motd | player-count | hover> <on | off> <gray>- <white>Set the normal random motd'
+- '<yellow>/maintenance <maintenance-random> <motd | player-count | hover> <on | off> <gray>- <white>Set the maintenance random motd'
+- '<yellow>/maintenance <normal-icon> <on | off | random> <gray>- <white>Set the normal icon'
+- '<yellow>/maintenance <maintenance-icon> <on | off | random> <gray>- <white>Set the maintenance icon'
+- '<yellow>/maintenance reload <gray>- <white>Reload the plugin'
+
+# general messages
+no-permission: '<red>You do not have permission to use this command.'
+already-enabled: '<red>Maintenance mode is already enabled.'
+already-disabled: '<red>Maintenance mode is already disabled.'
+enabled: '<green>Maintenance mode has been enabled.'
+enabled-with-reason: '<green>Maintenance mode has been enabled. Reason: <yellow>%reason%</yellow>.'
+disabled: '<green>Maintenance mode has been disabled.'
+invalid-line: '<red>The line number must be 1 or 2.'
+at-least-one: '<red>The line number must be at least 1.'
+must-be-positive: '<red>The max players must be a positive number.'
+this-line-does-not-exist: '<red>This line does not exist.'
+reloaded: '<green>The plugin has been reloaded.'
+until-usage: '<red>Usage: /maintenance for <time><s | m | h | d> [reason]'
+until: '<green>The maintenance mode has been enabled until <yellow>%until%(for %remain%)</yellow>.'
+until-with-reason: '<green>The maintenance mode has been enabled until <yellow>%until%(for %remain%)</yellow>. <newline>Reason: <yellow>%reason%</yellow>.'
+
+# default messages
+default-no-reason: 'No reason given.'
+default-no-until: 'The maintenance period has not been defined.'
+default-no-remain: 'The maintenance period has not been defined.'
+
+# time and date format
+format:
+  time: 'hh:mm:ss'
+  date: 'dd/mm/yyyy'
+
+# time units
+days: 'days'
+hours: 'hours'
+minutes: 'minutes'
+seconds: 'seconds'
+days-short: 'd'
+hours-short: 'h'
+minutes-short: 'm'
+seconds-short: 's'
+
+# kick messages
+kick:
+  message: '<red>The server is currently in maintenance mode.'
+  message-with-reason: '<red>The server is currently in maintenance mode. <newline>Reason: <yellow>%reason%</yellow>.'
+  message-with-until: '<red>The server is currently in maintenance mode. <newline>Until: <yellow>%until%(for %remain%)</yellow>.'
+  message-with-until-and-reason: '<red>The server is currently in maintenance mode. <newline>Until: <yellow>%until%(for %remain%)</yellow>. <newline>Reason: <yellow>%reason%</yellow>.'
+
+# fake-players messages
+fake-players:
+  set: '<green>The fake players has been set to <yellow>%fakeplayers%</yellow>.'
+  enabled: '<green>The fake players has been enabled.'
+  disabled: '<green>The fake players has been disabled.'
+  add-in-list:
+    enabled: '<green>The fake players add in list has been enabled.'
+    disabled: '<green>The fake players add in list has been disabled.'
+  random-order:
+    enabled: '<green>The fake players random order has been enabled.'
+    disabled: '<green>The fake players random order has been disabled.'
+  usage:
+    general: '<red>Usage: /maintenance <fakeplayers> <on | off | set | set-add-in-list | set-random-order>'
+    set: '<red>Usage: /maintenance fakeplayers set <number>'
+    add-in-list: '<red>Usage: /maintenance fakeplayers set-add-in-list <on | off>'
+    random-order: '<red>Usage: /maintenance fakeplayers set-random-order <on | off>'
+
+# max-players messages
+max-players:
+  set: '<green>The max players has been set to <yellow>%maxplayers%</yellow>.'
+  enabled: '<green>The custom max players has been enabled.'
+  disabled: '<green>The custom max players has been disabled.'
+  usage:
+    general: '<red>Usage: /maintenance <maxplayers> <on | off | set>'
+    set: '<red>Usage: /maintenance maxplayers set <number>'
+
+# normal-motd messages
+normal-motd:
+  usage: '<red>Usage: /maintenance <normal-motd> <line> [text]'
+  set: '<green>The line <yellow>%line%<green> of the normal MOTD has been set to <yellow>%text%<green>.'
+  set-clean: '<green>The line <yellow>%line%<green> of the normal MOTD has been cleared.'
+
+  random:
+    motd:
+      enabled: '<green>The normal random MOTD has been enabled.'
+      disabled: '<green>The normal random MOTD has been disabled.'
+    player-count:
+      enabled: '<green>The normal random player count has been enabled.'
+      disabled: '<green>The normal random player count has been disabled.'
+    hover:
+      enabled: '<green>The normal random hover has been enabled.'
+      disabled: '<green>The normal random hover has been disabled.'
+    usage:
+      general: '<red>Usage: /maintenance <normal-random> <motd | player-count | hover> <on | off>'
+      motd: '<red>Usage: /maintenance normal-random motd <on | off>'
+      player-count: '<red>Usage: /maintenance normal-random player-count <on | off>'
+      hover: '<red>Usage: /maintenance normal-random hover <on | off>'
+
+  player-count:
+    enabled: '<green>The normal player count has been enabled.'
+    disabled: '<green>The normal player count has been disabled.'
+    set: '<green>The normal player count has been set to <yellow>%text%</yellow>.'
+    remove: '<green>The normal player count has been removed.'
+    hover:
+      enabled: '<green>The normal player count hover has been enabled.'
+      disabled: '<green>The normal player count hover has been disabled.'
+      set: '<green>The normal player count hover has been set to <yellow>%text%</yellow> at line <yellow>%line%</yellow>.'
+      remove: '<green>The normal player count hover at line <yellow>%line%</yellow> has been removed.'
+    usage:
+      general: '<red>Usage: /maintenance <normal-player-count> <on | off | set | remove | hover | set-hover | remove-hover>'
+      set: '<red>Usage: /maintenance normal-player-count set <text>'
+      hover: '<red>Usage: /maintenance normal-player-count hover <on | off>'
+      set-hover: '<red>Usage: /maintenance normal-player-count set-hover <line> <text>'
+      remove-hover: '<red>Usage: /maintenance normal-player-count remove-hover <line>'
+
+  icon:
+    enabled: '<green>The normal icon has been enabled.'
+    disabled: '<green>The normal icon has been disabled.'
+    random:
+      enabled: '<green>The normal random icon has been enabled.'
+      disabled: '<green>The normal random icon has been disabled.'
+    usage:
+      general: '<red>Usage: /maintenance <normal-icon> <on | off | random>'
+      random: '<red>Usage: /maintenance normal-icon random <on | off>'
+
+# maintenance-motd messages
+maintenance-motd:
+  usage: '<red>Usage: /maintenance <maintenance-motd> <line> [text]'
+  set: '<green>The line <yellow>%line%<green> of the maintenance MOTD has been set to <yellow>%text%<green>.'
+  set-clean: '<green>The line <yellow>%line%<green> of the maintenance MOTD has been cleared.'
+
+  random:
+    motd:
+      enabled: '<green>The maintenance random MOTD has been enabled.'
+      disabled: '<green>The maintenance random MOTD has been disabled.'
+    player-count:
+      enabled: '<green>The maintenance random player count has been enabled.'
+      disabled: '<green>The maintenance random player count has been disabled.'
+    hover:
+      enabled: '<green>The maintenance random hover has been enabled.'
+      disabled: '<green>The maintenance random hover has been disabled.'
+    usage:
+      general: '<red>Usage: /maintenance <maintenance-random> <motd | player-count | hover> <on | off>'
+      motd: '<red>Usage: /maintenance maintenance-random motd <on | off>'
+      player-count: '<red>Usage: /maintenance maintenance-random player-count <on | off>'
+      hover: '<red>Usage: /maintenance maintenance-random hover <on | off>'
+
+  player-count:
+    enabled: '<green>The maintenance player count has been enabled.'
+    disabled: '<green>The maintenance player count has been disabled.'
+    set: '<green>The maintenance player count has been set to <yellow>%text%</yellow>.'
+    remove: '<green>The maintenance player count has been removed.'
+    hover:
+      enabled: '<green>The maintenance player count hover has been enabled.'
+      disabled: '<green>The maintenance player count hover has been disabled.'
+      set: '<green>The maintenance player count hover has been set to <yellow>%text%</yellow> at line <yellow>%line%</yellow>.'
+      remove: '<green>The maintenance player count hover at line <yellow>%line%</yellow> has been removed.'
+    usage:
+      general: '<red>Usage: /maintenance <maintenance-player-count> <on | off | set | remove | hover | set-hover | remove-hover>'
+      set: '<red>Usage: /maintenance maintenance-player-count set <text>'
+      hover: '<red>Usage: /maintenance maintenance-player-count hover <on | off>'
+      set-hover: '<red>Usage: /maintenance maintenance-player-count set-hover <line> <text>'
+      remove-hover: '<red>Usage: /maintenance maintenance-player-count remove-hover <line>'
+
+  icon:
+    enabled: '<green>The maintenance icon has been enabled.'
+    disabled: '<green>The maintenance icon has been disabled.'
+    random:
+      enabled: '<green>The maintenance random icon has been enabled.'
+      disabled: '<green>The maintenance random icon has been disabled.'
+    usage:
+      general: '<red>Usage: /maintenance <maintenance-icon> <on | off | random>'
+      random: '<red>Usage: /maintenance maintenance-icon random <on | off>'

@@ -1,0 +1,126 @@
+# is the server in maintenance mode?
+maintenance-mode: false
+reason : ''
+until: 0
+
+# show fake players
+fake-players:
+  custom: true
+  value-to-add: 5
+  add-in-list: true
+  random-order: true
+
+# custom max players
+max-players:
+  custom: true
+  value: 0
+
+# normal-motd
+normal-motd:
+  line1: '<rainbow>Welcome to the server!'
+  line2: '<gradient>Second line'
+  custom-player-count: false
+  player-count: '&a&l%online%&7/&a&l%max%'
+  custom-hover: false
+  player-count-hover:
+  - '&aOnline Players:'
+  - '&7%online%'
+  - '&aMax Players:'
+  - '&7%max%'
+  random-motd: true
+  motds:
+    motd1:
+      line1: '<yellow>Welcome to the server!'
+      line2: '<gradient:red:blue>Online: %online%'
+    motd2:
+      line1: '<green>Welcome to the server!'
+      line2: '<gradient:red:blue>Max: %max%'
+  random-player-count: true
+  player-counts:
+    - '&2&l%online%&7/&2&l%max%'
+    - '&e&l%online%&7/&e&l%max%'
+  random-hover: true
+  player-count-hovers:
+    hover1:
+      - '&bOnline Players:'
+      - '&7%online%'
+      - '&bMax Players:'
+      - '&7%max%'
+    hover2:
+      - '&6Online Players:'
+      - '&7%online%'
+      - '&6Max Players:'
+      - '&7%max%'
+
+# maintenance-motd
+maintenance-motd:
+  line1: '<red>The server is currently in maintenance mode.'
+  line2: '<gradient:#5e4fa2:#f79459>Please check back later.'
+  custom-player-count: true
+  player-count: '&cServer in Maintenance'
+  custom-hover: true
+  player-count-hover:
+  - '&cServer in Maintenance'
+  - '&cPlease check back later'
+  - '&cReason: %reason%'
+  - '&cUntil: %until%'
+  - '&cPlayers: %online%'
+  - '&cMax Players: %max%'
+  - '&cRemain: %remain%'
+  - '&cTime: %time%'
+  - '&cDate: %date%'
+  random-motd: true
+  motds:
+    motd1:
+      line1: '<dark_red>The server is currently in maintenance mode.'
+      line2: '<gradient:#5e4fa2:#f79459>Reason: %reason%'
+    motd2:
+      line1: '<dark_blue>The server is currently in maintenance mode.'
+      line2: '<gradient:#5e4fa2:#f79459>Until: %date%'
+    motd3:
+      line1: '<gold>The server is currently in maintenance mode.'
+      line2: '<gradient:#5e4fa2:#f79459>Remain: %time%'
+  random-player-count: true
+  player-counts:
+  - '&4Server in Maintenance'
+  - '&dServer in Maintenance'
+  - '&dReason: %reason%'
+  - '&dUntil: %until%'
+  - '&dPlayers: %online%'
+  - '&dMax Players: %max%'
+  - '&dRemain: %remain%'
+  - '&dTime: %time%'
+  - '&dDate: %date%'
+  random-hover: true
+  player-count-hovers:
+    hover1:
+      - '&4Server in Maintenance'
+      - '&4Please check back later'
+      - '&4Reason: %reason%'
+      - '&4Until: %until%'
+      - '&4Players: %online%'
+      - '&4Max Players: %max%'
+      - '&4Remain: %remain%'
+      - '&4Time: %time%'
+      - '&4Date: %date%'
+    hover2:
+      - '&dServer in Maintenance'
+      - '&dPlease check back later'
+      - '&dReason: %reason%'
+      - '&dUntil: %until%'
+      - '&dPlayers: %online%'
+      - '&dMax Players: %max%'
+      - '&dRemain: %remain%'
+      - '&dTime: %time%'
+      - '&dDate: %date%'
+
+# custom icons
+custom-icon:
+  normal:
+    enabled: true
+    random: false
+    default: '1.png'
+  maintenance:
+    enabled: true
+    random: false
+    default: '1.png'

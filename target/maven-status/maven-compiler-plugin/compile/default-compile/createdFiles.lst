@@ -1,0 +1,10 @@
+me\rednero\maintenancemotd\utils\Downsampler$ComponentColorDownsamplerImpl.class
+me\rednero\maintenancemotd\utils\MOTD.class
+me\rednero\maintenancemotd\utils\LoadPlaceholderAPI.class
+me\rednero\maintenancemotd\utils\Downsampler.class
+me\rednero\maintenancemotd\utils\LoadPlaceholderAPI$PlaceholderAPIImpl.class
+me\rednero\maintenancemotd\listeners\protocolLibListener.class
+me\rednero\maintenancemotd\utils\LoadProtocolLib.class
+me\rednero\maintenancemotd\listeners\onPlayerJoinListener.class
+me\rednero\maintenancemotd\utils\FakePlayers.class
+me\rednero\maintenancemotd\utils\Messages.class

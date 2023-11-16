@@ -1,0 +1,14 @@
+name: MaintenanceMOTD
+version: '${project.version}'
+main: me.rednero.maintenancemotd.MaintenanceMOTD
+api-version: '1.13'
+author: RedNero
+description: A plugin that allows you to set a MOTD for when the server is in maintenance mode and when it is not.
+commands:
+  maintenance:
+    description: Main command for MaintenanceMOTD.
+    permission: maintenancemotd.maintenance
+    aliases:
+    - mm
+    - maintenancemotd
+softdepend: [PlaceholderAPI, ProtocolLib]
