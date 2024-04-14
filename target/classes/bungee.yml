@@ -1,7 +1,6 @@
 name: MaintenanceMOTD
-version: '${project.version}'
-main: me.rednero.maintenancemotd.bukkit.MaintenanceMOTD
-api-version: '1.13'
+version: '3.0.0'
+main: me.rednero.maintenancemotd.bungee.MaintenanceMOTD
 author: RedNero
 description: A plugin that allows you to set a MOTD for when the server is in maintenance mode and when it is not.
 commands:
@@ -11,4 +10,3 @@ commands:
     aliases:
       - mm
       - maintenancemotd
-softdepend: [PlaceholderAPI, ProtocolLib]
